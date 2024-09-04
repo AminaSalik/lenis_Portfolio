@@ -93,16 +93,7 @@ t1.to(
   3.6
 );
 
-t1.from(
-  ".imsrk2",
-  {
-    xPercent: -100,
-    duration: 1,
-    ease: "power1.out",
-    opacity: 0,
-  },
-  3.8
-);
+
 
 t1.from(".cover-5", {
   yPercent: -100,
@@ -213,6 +204,73 @@ var tlMorph = new TimelineMax({repeat: -1, yoyo: true, repeatDelay: 0.3})
 
 tlMorph 
 .to('.image_one', 1, {morphSVG: {shape: '.image_two'}})
+
+
+// ==============================================================================
+
+tsParticles.load("tsparticles", {
+  background: {
+  
+   
+    repeat: "no-repeat",
+    size: "40%",
+    position: "60% 50%"
+  },
+  interactivity: {
+    events: {
+      onClick: {
+        enable: true,
+        mode: "repulse"
+      },
+      onHover: {
+        enable: true,
+        mode: "bubble"
+      }
+    },
+    modes: {
+      bubble: {
+        distance: 200,
+        duration: 2,
+        opacity: 0,
+        size: 0,
+        speed: 3
+      },
+      repulse: {
+        distance: 400,
+        duration: 0.4
+      }
+    }
+  },
+  particles: {
+    color: { value: "#ff98a2" },
+    move: {
+      direction: "none",
+      enable: true,
+      outModes: "out",
+      random: true,
+      speed: 0.3
+    },
+    number: {
+      density: {
+        enable: true
+      },
+      value: 600
+    },
+    opacity: {
+      animation: {
+        enable: true,
+        speed: 5
+      },
+      value: { min: 0.3, max: 0.6 }
+    },
+    shape: {
+      type: "circle"
+    },
+    size: {
+      value: 1
+    }
+  }
+});
 
 
 

@@ -326,6 +326,9 @@ main {
 	position: relative;
 	height: 100%;
 }
+.grid__item grid__item--title{
+	font-size: 12px;
+}
 
 .img-wrap--content {
 	height: 200px;
@@ -340,6 +343,7 @@ main {
 	background-position: 50% 50%;
 	position: absolute;
 	pointer-events: none;
+	filter: grayscale(100%) sepia(100%) hue-rotate(-56deg) saturate(300%) brightness(90%);
 }
 
 .img--content {
