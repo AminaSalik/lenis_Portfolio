@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>On-Scroll Shape Morph | Codrops</title>
+    <meta name="description" content="Demo of a morphing shape animation on scroll." />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/eay5gla.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/basse.css" />
+    <script>document.documentElement.className="js";</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./stylehome.css">
+    <link rel="stylesheet" href="./styleabout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+    <title>Document</title>
+
+  
+</head>
+<style>
+    /* ---- reset ---- */
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+
+
+
+
+@media (hover: hover) and (pointer: fine) {
+  #cursor {
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  #cursor .cursor--inner {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px #ff98a2;
+  }
+}
+
+</style>
+<body>
+    <div id="cursor">
+        <div class="cursor--inner"></div>
+      </div>
+    <div  id="tsparticles"></div>
+
+        <div class="frame" >
+            <!-- <h1 class="frame__title">web developer</h1> -->
+            <!-- <a class="frame__back" href="https://tympanus.net/codrops/?p=74333">Back to the article</a>
+            <a class="frame__prev" href="https://tympanus.net/Development/PixelGooeyTooltip">Previous demo</a> -->
+        </div>
+        <div class="intro" >
+            <div id="item-intro" class="content content--intro">
+                <div class="content__img-wrap">
+                    <div class="content__img content__img--1">
+                        <div class="content__img-inner" style="background-image:url(img/1.jpg);"></div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="intro__title"> 
+                <span class="intro__title-pre">Amina</span> 
+            </h1> 
+            <span class="intro__info">Scroll moderately for a better animation experience.</span> 
+        </div>
+     
+    
+        <div class="page black-background">
+         
+               <div class="content-wrap">
+				
+            <div id="item-2" class="content">
+                <div class="content__img-wrap">
+                    <div class="content__img content__img--1">
+                        <div class="content__img-inner" style="background-image:url(img/5.jpg);"></div>
+                        <div class="content__img-inner content__img-inner--hidden" style="background-image:url(img/6.jpg);"></div>
+                    </div>
+                </div>
+                <div class="text-container-3" id="about">
+                    <p class="content__text content__text--left   split-text-3"><span>From Thrones to Chains</span> <span>Surrender of Sovereignty</span></p>
+                </div>
+              
+            </div>
+            
+        </div>
+
+        
+        
+            </section>
+
+
+    
+            <div class="spacer"></div>
+
+
+            
+     
+			<div class="content content--spacing" id="contact">
+				<div class="grid grid--5">
+					<div class="grid-wrap">
+                        <div>
+                            
+                        </div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/18.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/29.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/6.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/37.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/15.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/32.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/41.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/23.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/5.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/12.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/27.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/1.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/46.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/35.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/20.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/39.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/8.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/25.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/2.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/44.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/43.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/17.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/26.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/11.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/14.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/7.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/33.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/30.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/10.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/21.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/16.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/31.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/24.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/36.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/42.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/3.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/38.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/9.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/4.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/40.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/28.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/22.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/34.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/13.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/19.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/47.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/45.jpg)"></div></div>
+						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/48.jpg)"></div></div>
+					</div>
+				</div>
+				<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>
+			</div>
+
+        
+            <iframe src="ok.html" width="100%" height="500px" style="border:none;"></iframe>
+
+           
+    
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+    
+            <section id="projects">
+                <div class="text-container-2">
+        <p class="split-text-2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas optio ipsa quos mollitia itaque, repudiandae consequuntur ullam! Ipsam repudiandae vitae vero corrupti labore, adipisci facilis cupiditate explicabo reiciendis atque consequuntur.</p>
+      </div>
+        </section>
+    
+            <section id="contact">
+                <h1>Contact Me</h1>
+            </section>
+        </div>
+    
+
+  
+
+
+ 
+
+
+
+    <!-- Add the necessary scripts from the first HTML file -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.8.0"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/dist/tsparticles.bundle.min.js"></script> -->
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Your additional scripts -->
+    <script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+    
+    <script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+
+    <script>
+
+
+
+    tsParticles.load("tsparticles", {
+        background: {
+        
+         
+          repeat: "no-repeat",
+          size: "40%",
+          position: "60% 50%"
+        },
+        interactivity: {
+          events: {
+            onClick: {
+              enable: true,
+              mode: "repulse"
+            },
+            onHover: {
+              enable: true,
+              mode: "bubble"
+            }
+          },
+          modes: {
+            bubble: {
+              distance: 200,
+              duration: 2,
+              opacity: 0,
+              size: 0,
+              speed: 3
+            },
+            repulse: {
+              distance: 400,
+              duration: 0.4
+            }
+          }
+        },
+        particles: {
+          color: { value: "#ff98a2" },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: "out",
+            random: true,
+            speed: 0.3
+          },
+          number: {
+            density: {
+              enable: true
+            },
+            value: 600
+          },
+          opacity: {
+            animation: {
+              enable: true,
+              speed: 5
+            },
+            value: { min: 0.3, max: 0.6 }
+          },
+          shape: {
+            type: "circle"
+          },
+          size: {
+            value: 1
+          }
+        }
+    });
+
+
+
+
+
+
+    const cursor = document.querySelector('#cursor');
+let mouse = { x: 300, y: 300 };
+let pos = { x: 0, y: 0 };
+const speed = 0.1; // between 0 and 1
+
+const updatePosition = () => {
+  pos.x += (mouse.x - pos.x) * speed;
+  pos.y += (mouse.y - pos.y) * speed;
+  cursor.style.transform = 'translate3d(' + pos.x + 'px ,' + pos.y + 'px, 0)';
+};
+
+const updateCoordinates = e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+}
+
+window.addEventListener('mousemove', updateCoordinates);
+
+function loop() {
+  updatePosition();
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+
+
+
+
+
+
+
+
+
+
+
+
+// Initialize SplitType for .split-text-3
+const ghostText3 = new SplitType(".split-text-3");
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tlGhost3 = gsap.timeline();
+
+tlGhost3.from(".text-container-3 .char", {
+  filter: "blur(20px)",
+  willChange: "filter",
+  scaleY: 0.1,
+  stagger: 0.07,
+  scrollTrigger: {
+    trigger: ".text-container-3",
+    start: "top center",
+    end: "bottom top+=100",
+    scrub: true,
+    // markers: true, // Uncomment to see the scroll position markers
+    ease: "power4.out"
+    //pin: true
+  }
+});
+
+// Lenis for smooth scrolling (Optional)
+const leniss = new Lenis();
+
+function raf(time) {
+  leniss.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+// =================================================
+const ghostTextt3 = new SplitType(".split-text-2");
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tlGhostt3 = gsap.timeline();
+
+tlGhostt3.from(".text-container-2 .char", {
+  filter: "blur(20px)",
+  willChange: "filter",
+  scaleY: 0.1,
+  stagger: 0.07,
+  scrollTrigger: {
+    trigger: ".text-container-2",
+    start: "top center",
+    end: "bottom top+=100",
+    scrub: true,
+    // markers: true, // Uncomment to see the scroll position markers
+    ease: "power4.out"
+    //pin: true
+  }
+});
+
+// Lenis for smooth scrolling (Optional)
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+// ====================================================
+
+       
+        
+       
+
+
+        
+        // ===================================================
+     
+
+        
+              // ========================================================================== project
+                gsap.registerPlugin(ScrollTrigger);
+        
+                const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
+                const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+                const allPhotos = gsap.utils.toArray(".desktopPhoto");
+        
+                gsap.set(photos, { yPercent: 101 });
+        
+                // Media query handling
+                const query = window.matchMedia("(min-width: 600px)");
+        
+                function setupScrollTriggers() {
+                    if (query.matches) {
+                        console.log("desktop");
+        
+                        ScrollTrigger.create({
+                            trigger: ".gallery",
+                            start: "top top",
+                            end: "bottom bottom",
+                            pin: ".right"
+                        });
+        
+                        details.forEach((detail, index) => {
+                            let headline = detail.querySelector("h1");
+                            let animation = gsap.timeline()
+                                .to(photos[index], { yPercent: 0 })
+                                .set(allPhotos[index], { autoAlpha: 0 });
+        
+                            ScrollTrigger.create({
+                                trigger: headline,
+                                start: "top 80%",
+                                end: "top 50%",
+                                animation: animation,
+                                scrub: true,
+                                markers: false
+                            });
+                        });
+                    }
+                }
+        
+                setupScrollTriggers();
+                query.addListener(setupScrollTriggers);
+        
+                // Existing GSAP animations for other sections
+                gsap.timeline({ delay: 0.7 })
+                    .to('#hero div', { duration: 0.5, y: 0, stagger: 0.3 });
+        
+                function updateBoxShadow() {
+                    const image = document.querySelector('.image');
+                    const page = document.querySelector('.page');
+        
+                    if (page.classList.contains('black-background')) {
+                        image.classList.add('black-background');
+                        image.classList.remove('white-background');
+                    } else if (page.classList.contains('white-background')) {
+                        image.classList.add('white-background');
+                        image.classList.remove('black-background');
+                    }
+                }
+        
+                ScrollTrigger.create({
+                    trigger: "#about",
+                    start: "top top",
+                    end: "bottom top",
+                   
+                });
+        
+                ScrollTrigger.create({
+                    trigger: "#projects",
+                    start: "top top",
+                    end: "bottom top",
+                   
+                });
+        
+                ScrollTrigger.create({
+                    trigger: "#contact",
+                    start: "top top",
+                    end: "bottom top",
+                   
+                });
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+                
+            </script>
+
+
+</body>
+</html>

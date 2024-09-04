@@ -1,0 +1,28 @@
+
+body {
+height: 100vh;
+background-color: #111;
+color: white;
+background-image: url(https://tympanus.net/Development/ScrollBlurTypography/img/noise.png);
+background-size: 200px;
+cursor: url('./assets/images/cursor.png'), auto;
+}
+
+
+.split-text-2 {
+font-size: 3rem;
+max-width: 880px;
+margin: 0 auto;
+}
+
+.text-container {
+padding: 80px 0;
+}
+
+section {
+height: 100vh;
+display: grid;
+place-items: center;
+text-align: center;
+}
+
