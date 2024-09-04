@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
- 
-
-
-
-
-
+html{
+  overflow-y: hidden;
+}
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -199,37 +188,3 @@ p {
   text-transform: uppercase;
   border-radius: 32px;
 }
-</style>
-<body>
-
-        <div class="app app__dark">
-          <header class="app-header">
-           <h1 class="">GET IN TOUCH</h1>
-          </header>
-      
-          <form class="login">
-      
-            <div class="login-input-group">
-              <div class="login-floating-label-form-group login-floating-label-form-group__dark">
-                <label></label>
-                <input class="login-form-control login-form-control__dark" type="gmail" name="What's your email" placeholder="What's your email" />
-                <p class="help-block text-danger"></p>
-              </div>
-      
-              <div class="login-floating-label-form-group login-floating-label-form-group__dark">
-                <label>What do you want to say</label>
-                <input class="login-form-control login-form-control__dark" type="" name="" placeholder="What do you want to say" />
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-      
-            <div class="login-form-group">
-              <button type="submit" class="btn btn__dark btn__xl">save</button>
-            </div>
-          </form>
-        </div>
-     
-
-
-</body>
-</html>

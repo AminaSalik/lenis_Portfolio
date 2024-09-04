@@ -15,8 +15,9 @@
 	font-style: normal;
 }
 
-
-
+html{
+  overflow-y: hidden;
+}
 
 body {
   -webkit-box-sizing: border-box;

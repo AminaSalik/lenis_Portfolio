@@ -26,7 +26,6 @@ html, body {
 	font-size: 14px;
 	--color-text: #fff;
 	--color-bg: #0b0826;
-	--color-bg-alt: hsl(222.55deg 100% 49.22%);
 	--color-link: #fff;
 	--color-link-hover: #fff;
 	--color-title: #fff;
@@ -37,8 +36,8 @@ body {
 	color: var(--color-text);
 	background-color: linear-gradient(0deg, black, #60393d);
 	font-family: 'Tenon', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
 	cursor: url('../assets//images/cursor.png'), auto;
 }
 

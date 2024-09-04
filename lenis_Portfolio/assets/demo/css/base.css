@@ -1,6 +1,8 @@
-
-
+html{
+  overflow-y: hidden;
+}
 body {
+	overflow-y: hidden;
 	--color-text: #5d5d5d;
 	/* --color-bg: #e6e6ea; */
 	--color-link: #ffffff;
@@ -17,21 +19,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-	cursor: url('../../assets/images/cursor.png'), auto;
+	/* cursor: url('../../assets/images/cursor.png'), auto; */
 }
 
-.dark-mode {
-	--color-text: #424242;
-	--color-bg: #ffffff;
-	--color-link: #bb3a3a;
-	--color-link-hover: #fff;
-	--color-number: #484848;
-	--color-title: #bb3a3a;
-	--color-caption: #484848;
-	--color-content: #dadada;
-	--color-content-title: #bb3a3a;
-	/* --color-content-meta: #fff; */
-}
+
 
 /* Page Loader */
 .js .loading::before {
@@ -83,6 +74,7 @@ a:focus {
 main {
 	position: relative;
 	min-height: 100vh;
+	overflow: hidden;
 }
 
 .frame {
